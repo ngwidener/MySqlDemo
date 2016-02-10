@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText UsernameEt, PasswordEt;
+    EditText UsernameEt, PasswordEt, EmailEt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
         UsernameEt = (EditText) this.findViewById(R.id.etUserName);
         PasswordEt = (EditText) this.findViewById(R.id.etPassword);
+        EmailEt = (EditText) this.findViewById(R.id.email);
 
     }
 
     public void OnLogin(View view) {
         String username = UsernameEt.getText().toString();
         String password = PasswordEt.getText().toString();
+        String email = EmailEt.getText().toString();
         String type = "Login";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
-        backgroundWorker.execute(type, username, password);
+        backgroundWorker.execute(type, username, password, email);
     }
 }

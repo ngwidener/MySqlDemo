@@ -31,11 +31,20 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/btnLogin"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="139dp"
+        android:onClick="OnLogin"
+        android:layout_below="@+id/etPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email"
         android:layout_below="@+id/etPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp"
-        android:onClick="OnLogin"/>
+        android:layout_marginTop="40dp" />
 </RelativeLayout>
